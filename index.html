@@ -25,6 +25,8 @@ select { appearance:none; width:100%; background:var(--surface); border:1px soli
 h2 { margin:0; font-size:20px; letter-spacing:0; }
 h3 { margin:22px 0 8px; font-size:16px; letter-spacing:0; }
 #row-count, .section-note { color:var(--muted); font-size:13px; }
+.score-method { background:var(--surface); border:1px solid var(--line); padding:12px 14px; margin:0 0 18px; color:var(--muted); }
+.score-method strong { color:var(--ink); }
 .table-wrap { overflow-x:auto; }
 table { width:100%; border-collapse:collapse; background:var(--surface); border:1px solid var(--line); }
 th, td { border-bottom:1px solid var(--line); padding:9px 10px; vertical-align:middle; }
@@ -66,6 +68,10 @@ tbody tr:hover { background:#eef6f8; }
       </div>
     </div>
   </div>
+
+  <section class="score-method">
+    <strong>Score logic:</strong> ROI is calculated as (Net + FTD Amount) / Rewards. Best Score averages the normalized ROI percentile and normalized Rewards percentile, so higher ROI and larger rewards rank higher. Worst Score averages the normalized inverse ROI percentile and normalized Rewards percentile, so lower ROI and larger rewards rank higher. Scores are recalculated within the selected timeframe and group.
+  </section>
 
   <section>
     <div class="report-head">
